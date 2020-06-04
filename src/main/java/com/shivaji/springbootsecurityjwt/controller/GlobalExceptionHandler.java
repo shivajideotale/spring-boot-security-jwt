@@ -13,9 +13,9 @@ public class GlobalExceptionHandler {
 
     private static final Logger logger = LoggerFactory.getLogger(GlobalExceptionHandler.class);
 
-    @ResponseStatus(value= HttpStatus.UNAUTHORIZED, reason="Incorrect username or password")
+    @ResponseStatus(value = HttpStatus.UNAUTHORIZED, reason = "Incorrect username or password")
     @ExceptionHandler(BadCredentialsException.class)
-    public void  handleBadCredentialsException(){
+    public void handleBadCredentialsException() {
         logger.error("BadCredentialsException handler executed");
     }
 }

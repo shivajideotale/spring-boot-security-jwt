@@ -34,8 +34,7 @@ public class JwtAuthenticationController {
             authenticationManager.authenticate(
                     new UsernamePasswordAuthenticationToken(authenticationRequest.getUsername(), authenticationRequest.getPassword())
             );
-        }
-        catch (BadCredentialsException ex) {
+        } catch (BadCredentialsException ex) {
             // throw new Exception("Incorrect username or password", e);
             throw ex;
         }
